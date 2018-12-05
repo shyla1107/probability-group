@@ -24,6 +24,7 @@ The stocks and the companies they represent in our data are:
 ### Two Stock Analyses
 
 #### Test the equality of the two population means
+#### Regression of one log-return on the other
 
 ## Conclusion
 
