@@ -26,5 +26,17 @@ The stocks and the companies they represent in our data are:
 #### Test the equality of the two population means
 #### Regression of one log-return on the other
 
+### Part 3. Regression Analyses
+
+#### (1) Log-Returns Regression between S&P 500 and Consumer-Goods Stocks
+##### i. Normal Goods
+##### ii. Luxury Goods
+
+#### (2) Adjusted Prices Regression between S&P 500 and Consumer-Goods Stocks
+##### i. Normal Goods
+##### ii. Luxury Goods
+
+#### (3) Log-Returns Regression between Normal-Goods and Luxury-Goods Stocks
+
 ## Conclusion
 
