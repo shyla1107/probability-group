@@ -16,7 +16,14 @@ The stocks and the companies they represent in our data are:
 
 ### Single Stock Analyses
 
+#### Display histograms by stock symbol
+#### Display a normal probability plot
+#### Confidence intervals for the means and variances
+#### Regression of the log-return on time
+
 ### Two Stock Analyses
+
+#### Test the equality of the two population means
 
 ## Conclusion
 
