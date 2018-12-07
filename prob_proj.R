@@ -1,8 +1,12 @@
-codelist<-c('AAPL','HNNMY','GPS','LULU','RL','PVH','NKE','KO','TIF','REV')
+codelist<-c('AAPL','HNNMY','GPS','LULU','RL','PVH','NKE','KO','TIF','REV','SPX')
+library(readxl)
+
 #select time from 2010-01-01 to 2017-12-31
 for (i in 1:length(codelist)){
-  temp<-read.csv(paste0('~/Downloads/stock data/',codelist[i],'.csv'),
-                 header = TRUE)
+  if (i!=length(codelist))
+    temp<-read.csv(paste0('~/Downloads/stock data/',codelist[i],'.csv'),header = TRUE)
+  else
+    temp<-read_xlsx(paste0('~/Downloads/stock data/',codelist[i],'.xlsx'))
   temp<-data.frame(temp)
   temp$ret<-(temp$close/temp$open)-1
   temp$logret<-log(temp$close/temp$open)
@@ -27,7 +31,7 @@ for (i in codelist){
   dev.off()
 }
 
-#calculate return and visualize the distribution of return
+#visualize the distribution of return
 for (i in codelist){
   temp<-get(i)
   jpeg(paste0('~/Downloads/stock data/',i,'_Return.jpg'))
@@ -36,7 +40,7 @@ for (i in codelist){
   dev.off()
 }
 
-#calculate log-return and visualize the distribution of log-return
+#visualize the distribution of log-return
 for (i in codelist){
   temp<-get(i)
   jpeg(paste0('~/Downloads/stock data/',i,'_LogReturn.jpg'))
@@ -45,7 +49,12 @@ for (i in codelist){
   dev.off()
 }
 
-
+#normal probability plot
+for (i in codelist){
+  temp<-get(i)
+  qqnorm(temp$logret)
+  qqline(temp$logret)
+}
 
 # mean confidence interval
 t.test(AAPL$logret, conf.level = 0.95)
