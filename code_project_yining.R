@@ -129,4 +129,4 @@ colnames(corr) <- c('Apple','Ralph Lauren','Lululemon','PVH','Tiffany')
 rownames(corr) <- c('GAP','H&M','Coca-Cola','NIKE','Revlon')
 
 plot(aapl,sp500,xlab = "Apple",ylab = "S&P 500",pch=19)
-smoothScatter(aaplcp,sp500cp,xlab = "Apple",ylab = "S&P 500")
+# plot(aaplcp,sp500cp,xlab = "Apple",ylab = "S&P 500")
